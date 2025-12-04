@@ -52,6 +52,10 @@ function wyslijFormularz() {
     return false;
   }
 
-  alert("Dziękujemy za kontakt, " + imie + "! Odpowiemy wkrótce.");
+  const subject = encodeURIComponent("Kontakt z formularza od " + imie);
+  const body = encodeURIComponent("Email: " + email + "\n\nWiadomość:\n" + wiadomosc);
+
+  window.location.href = `mailto:malwinasawczuk@gmail.com?subject=${subject}&body=${body}`;
+
   return false;
 }
