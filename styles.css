@@ -68,9 +68,18 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;   /* wyśrodkowanie tekstu w pionie */
+  gap: 12px;             /* odstęp między obrazkiem a tekstem */
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+.logo img {
+  height: 50px;          /* dopasuj rozmiar obrazka */
+  width: auto;
+  display: block;
 }
 
 /* MENU */
