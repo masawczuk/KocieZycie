@@ -1,60 +1,46 @@
-/* RESET */
+/* ===================== */
+/* RESET                 */
+/* ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================== */
+/* BODY                  */
+/* ===================== */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background: #ffffff;
-  color: #000;
+  color: #000000;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- TRYB CIEMNY --- */
+/* ===================== */
+/* DARK MODE             */
+/* ===================== */
 body.dark-mode {
   background: #1e1e1e;
   color: #f1f1f1;
 }
 
-body.dark-mode header {
-  border-bottom: 1px solid #333;
+/* ===================== */
+/* GLOBAL TEXT           */
+/* ===================== */
+h1, h2, h3, h4, h5, h6,
+p, li, span {
+  color: inherit;
 }
 
-body.dark-mode nav a {
-  color: #f1f1f1;
-}
-
-body.dark-mode .burger span {
-  background: #f1f1f1;
-}
-
-body.dark-mode .hero {
-  background: #333;
-}
-
-body.dark-mode .gallery div {
-  background: #444;
-}
-
-body.dark-mode footer {
-  border-top: 1px solid #333;
-}
-
-body.dark-mode input,
-body.dark-mode textarea {
-  background: #333;
-  color: #f1f1f1;
-  border: 1px solid #555;
-}
-
-body.dark-mode nav {
-  background: #1e1e1e;
-}
-
-/* HEADER */
+/* ===================== */
+/* HEADER                */
+/* ===================== */
 header {
   width: 100%;
   padding: 15px 40px;
@@ -63,6 +49,10 @@ header {
   align-items: center;
   border-bottom: 1px solid #ddd;
   position: relative;
+}
+
+body.dark-mode header {
+  border-bottom: 1px solid #333;
 }
 
 .logo {
@@ -76,11 +66,16 @@ header {
 
 .logo img {
   height: 50px;
-  width: auto;
   display: block;
 }
 
-/* MENU */
+.logo span {
+  color: inherit;
+}
+
+/* ===================== */
+/* NAV                   */
+/* ===================== */
 nav {
   display: flex;
   gap: 28px;
@@ -89,9 +84,9 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
   font-size: 20px;
   font-weight: 300;
+  color: inherit;
   transition: 0.3s;
 }
 
@@ -99,27 +94,21 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* PRZYCISK TRYBU CIEMNEGO */
+/* ===================== */
+/* DARK MODE BUTTON      */
+/* ===================== */
 .dark-mode-toggle {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: #000;
+  color: inherit;
   margin-left: 15px;
-  padding: 5px;
-  transition: color 0.3s;
 }
 
-body.dark-mode .dark-mode-toggle {
-  color: #f1f1f1;
-}
-
-.dark-mode-toggle:hover {
-  opacity: 0.7;
-}
-
-/* BURGER */
+/* ===================== */
+/* BURGER                */
+/* ===================== */
 .burger {
   display: none;
   cursor: pointer;
@@ -130,12 +119,13 @@ body.dark-mode .dark-mode-toggle {
 .burger span {
   width: 30px;
   height: 3px;
-  background: black;
-  display: block;
+  background: currentColor;
   transition: 0.3s;
 }
 
-/* HERO */
+/* ===================== */
+/* HERO                  */
+/* ===================== */
 .hero {
   height: 55vh;
   background: #f1f1f1;
@@ -145,6 +135,10 @@ body.dark-mode .dark-mode-toggle {
   align-items: center;
   text-align: center;
   padding: 40px;
+}
+
+body.dark-mode .hero {
+  background: #333;
 }
 
 .hero h1 {
@@ -157,7 +151,9 @@ body.dark-mode .dark-mode-toggle {
   max-width: 600px;
 }
 
-/* CONTENT SECTION */
+/* ===================== */
+/* SECTIONS               */
+/* ===================== */
 .section {
   padding: 40px;
   max-width: 1200px;
@@ -165,10 +161,18 @@ body.dark-mode .dark-mode-toggle {
   font-size: 20px;
 }
 
-/* ===================== */
-/* GALLERY – RESPONSIVE  */
-/* ===================== */
+.section ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
 
+.section li {
+  margin-bottom: 8px;
+}
+
+/* ===================== */
+/* GALLERY               */
+/* ===================== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -176,7 +180,6 @@ body.dark-mode .dark-mode-toggle {
   padding: 40px;
 }
 
-/* kontener jednego zdjęcia */
 .gallery div {
   width: 100%;
   border-radius: 12px;
@@ -184,7 +187,10 @@ body.dark-mode .dark-mode-toggle {
   background: #ccc;
 }
 
-/* zdjęcie */
+body.dark-mode .gallery div {
+  background: #444;
+}
+
 .gallery img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -192,15 +198,22 @@ body.dark-mode .dark-mode-toggle {
   display: block;
 }
 
-/* podpis */
 .gallery p {
   text-align: center;
   padding: 12px 0;
   font-weight: 600;
-  background: transparent;
+  color: inherit;
 }
 
-/* CONTACT FORM */
+.gallery a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===================== */
+/* FORMS                 */
+/* ===================== */
 form {
   display: flex;
   flex-direction: column;
@@ -214,12 +227,21 @@ textarea {
   border: 1px solid #aaa;
   border-radius: 6px;
   font-size: 18px;
+  background: #fff;
+  color: #000;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
 }
 
 button {
   padding: 14px 20px;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -230,7 +252,9 @@ button:hover {
   opacity: 0.8;
 }
 
-/* FOOTER */
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
 footer {
   padding: 30px;
   text-align: center;
@@ -239,16 +263,19 @@ footer {
   margin-top: 40px;
 }
 
-/* ===================== */
-/* RESPONSYWNOŚĆ         */
-/* ===================== */
+body.dark-mode footer {
+  border-top: 1px solid #333;
+}
 
+/* ===================== */
+/* RESPONSIVE            */
+/* ===================== */
 @media (max-width: 900px) {
   nav {
     position: absolute;
     top: 80px;
     right: 0;
-    background: white;
+    background: #ffffff;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -257,9 +284,9 @@ footer {
     border-top: 1px solid #ddd;
   }
 
-  nav .dark-mode-toggle {
-    margin-left: 0;
-    margin-top: 10px;
+  body.dark-mode nav {
+    background: #1e1e1e;
+    border-top: 1px solid #333;
   }
 
   nav.open {
