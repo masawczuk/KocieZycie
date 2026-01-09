@@ -863,8 +863,7 @@ html, body {
     font-size: 24px;
   }
 
-  .hero h1,
-  .hero h2 {
+  .hero h1 {
     font-size: 48px;
   }
 
@@ -891,3 +890,119 @@ html, body {
     height: 400px;
   }
 }
+
+/* Małe ekrany */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    gap: 10px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  nav {
+    padding: 15px 20px;
+    top: 75px;
+  }
+
+  .dark-mode-toggle {
+    font-size: 18px;
+    padding: 6px 10px;
+    margin-left: 10px;
+  }
+
+  .section,
+  .gallery-wrapper {
+    padding: 25px 20px;
+    margin: 20px 10px;
+    font-size: 17px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+    padding-left: 15px;
+    border-left-width: 4px;
+  }
+
+  .section h3 {
+    font-size: 22px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 40px 20px;
+  }
+
+  .hero h1, 
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* Galeria - 1 kolumna na telefonach */
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery div {
+    min-width: 100%;
+  }
+
+  .gallery img {
+    min-height: 180px;
+  }
+
+  .gallery p {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  .advice-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .advice-gallery-item img {
+    height: 200px;
+  }
+
+  .contact-container {
+    gap: 25px;
+  }
+
+  .contact-image-single {
+    height: 300px;
+  }
+
+  .contact-intro {
+    font-size: 16px;
+  }
+
+  input,
+  textarea {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+}
+
