@@ -796,7 +796,7 @@ html, body {
 /* ===================== */
 
 /* Tablety i mniejsze laptopy */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .section,
   .gallery-wrapper {
     padding: 35px 40px;
