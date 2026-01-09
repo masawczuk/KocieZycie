@@ -14,7 +14,6 @@
     <span>KOCIE ŻYCIE</span>
   </div>
 
-
   <div class="burger" id="burger">
     <span></span><span></span><span></span>
   </div>
@@ -29,16 +28,30 @@
   </nav>
 </header>
 
-<section class="section">
+<section class="hero">
   <h1>Skontaktuj się z nami</h1>
+</section>
 
-  <form onsubmit="return wyslijFormularz()">
-    <input type="text" id="imie" placeholder="Twoje imię">
-    <input type="email" id="email" placeholder="Twój email">
-    <textarea id="wiadomosc" rows="6" placeholder="Twoja wiadomość"></textarea>
+<section class="section">
+  <div class="contact-container">
+    <div class="contact-form-wrapper">
+      <p class="contact-intro">Masz pytania o adopcji kotów? Chcesz podzielić się swoją historią? Napisz do nas!</p>
+      
+      <form onsubmit="return wyslijFormularz()">
+        <input type="text" id="imie" placeholder="Twoje imię" required>
+        <input type="email" id="email" placeholder="Twój email" required>
+        <textarea id="wiadomosc" rows="6" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij wiadomość</button>
+      </form>
+    </div>
 
-    <button type="submit">Wyślij</button>
-  </form>
+    <div class="contact-image-single">
+      <img src="kontakt/tytka7.jpg" alt="Kocie życie">
+      <div class="contact-image-overlay">
+        <p>🐱 Czekamy na Twoją wiadomość!</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>&copy; 2025 Malwina Sawczuk i Natalia Rucińska</footer>
