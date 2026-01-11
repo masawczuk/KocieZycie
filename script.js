@@ -1,22 +1,22 @@
+// BURGER MENU
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const body = document.body;
 const darkModeToggle = document.getElementById("darkModeToggle");
 
-// Obsługa menu burger (otwieranie/zamykanie)
 burger.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-// FUNKCJA TRYBU CIEMNEGO
+// FUNKCJA ZMIANY TRYBU
 function initializeDarkMode() {
   const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
   
   if (isDarkMode) {
     body.classList.add('dark-mode');
-    darkModeToggle.textContent = '☀️'; // Słońce dla trybu jasnego
+    darkModeToggle.textContent = '☀️'; // tryb dzien
   } else {
-    darkModeToggle.textContent = '🌙'; // Księżyc dla trybu ciemnego
+    darkModeToggle.textContent = '🌙'; // tryb noc
   }
 }
 
@@ -33,15 +33,12 @@ function toggleDarkMode() {
   }
 }
 
-// Sprawdzenie i ustawienie trybu przy ładowaniu strony
-// Warunek 'if' jest potrzebny, ponieważ 'script.js' ładuje się na wszystkich stronach, 
-// a przycisk 'darkModeToggle' może być niedostępny (choć dodaliśmy go wszędzie)
 if (darkModeToggle) {
     darkModeToggle.addEventListener('click', toggleDarkMode);
     initializeDarkMode();
 }
 
-// FORMULARZ KONTAKTU
+// FORMULARZ KONTAKTOWY
 function wyslijFormularz() {
   const imie = document.getElementById("imie").value;
   const email = document.getElementById("email").value;
